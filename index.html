@@ -15,7 +15,6 @@
 <body>
   <div class="cursor"></div>
     <!--Container 1 Have the landing page and the about page -->
-
    <div class="container1">
     <div class="loadingPage">
         <img src="./Images/Logo.png">
@@ -39,7 +38,7 @@
                 <a href="#contact" onclick="hid()"><li>05 Contact</li></a>
               </ul>
             </nav>
-             </div>
+             
             <main>
                 <div class="MainText">
                   <h1><span class="H">H</span><span class="E">e</span><span class="L">ll</span><span class="O">o</span></h1>
@@ -59,33 +58,11 @@
             </div>
             <div class="AboutText">
                 <h3>Hello my name is Brahim Senhaji</h3>
-                <p>As a full-stack web developer, I thrive on thinking out of the box when creating web applications. My passion lies in seamlessly merging the realms of logic and creative design to craft eye-catching, accessible, and user-friendly websites. I take pride in my ability to create innovative and functional solutions that not only meet clients' needs but also exceed their expectations. Let's build something remarkable together!</p>
+                <p>i'm a full-stack web developer.<br>I don't have a lot of experience in this field but i believe that i can learn anything and being more creative. Ilike to think out of the box when i create something and I love combining the worlds of logic and creative design to make eye-catching, accessible, and user friendly websites and applications.</p>
                <div class="More">
                 <a href="#works">Take a look of my works</a>
                 <a href="./Myinfo/CV(E).pdf">My reusme</a>
                </div>
-
-               <script>
-                const fileInput = document.getElementById('fileInput');
-            
-                const downloadLink = document.getElementById('downloadLink');
-            
-                fileInput.addEventListener('change', function() {
-                  const file = fileInput.files[0];
-            
-                  if (file) {
-                    const fileURL = URL.createObjectURL(file);
-            
-                    downloadLink.href = fileURL;
-            
-                    downloadLink.setAttribute('download', file.name);
-            
-                    downloadLink.style.display = 'block';
-                  } else {
-                    downloadLink.style.display = 'none';
-                  }
-                });
-              </script>
             </div>
               <i class="fa-solid fa-arrow-down" id="GoDown"></i>
               <h1 class="PagesNumber">02</h1>
