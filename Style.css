@@ -1015,7 +1015,9 @@ form button:hover{
     
     .PagesNumber{
         left: 10%;
-        bottom: 50px;
+        bottom: 80px;
+        padding: 20px;
+        text-align: center;
     }
     .abouthead .fa-solid {
         margin-left: 20px;
