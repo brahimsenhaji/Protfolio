@@ -117,7 +117,6 @@ span:nth-of-type(3){
 nav a{
     color: var(--PrimaryColor);
     transition: 0.3s;
-    margin-left: 10px;
 }
 nav ul{
     position: fixed;
@@ -133,10 +132,13 @@ nav ul{
 .SlidNav{
     right: 0;
 }
+.removeNav{
+    right: -100%;
+}
 nav ul li{
     margin-top: 20px;
     background-color: var(--SecondColor);
-    padding: 1vmin 0;
+    padding: 1vmin 10px;
     cursor: pointer;
     transition: 0.5s ease-in;
     text-transform: uppercase;
@@ -228,6 +230,8 @@ main h2{
     -webkit-text-stroke: 3px var(--SecondColor);
     color: transparent;
     transition: 0.3s;
+    text-align: center;
+
 }
 .home .fa-solid:hover{
     color: var(--SecondColor);
@@ -355,13 +359,10 @@ main h2{
 #GoDown{
     left: 80%;
     top: 55%;
+    text-align: center;
+
 }
-@media screen and (max-width:767px) {
-    #GoDown{
-        left: 70%;
-        top:80%;
-    }
-}
+
 #GoDown{
     position: absolute;
     right: 5%;
@@ -444,6 +445,7 @@ main h2{
     font-family: var(--SecondFont);
     top: -50%;
     transition: 1s;
+
 }
 .MoveTskills{
     top: 10px;
@@ -513,6 +515,8 @@ main h2{
     -webkit-text-stroke: 3px var(--SecondColor);
     color: transparent;
     transition: 0.3s;
+    text-align: center;
+
 }
 #GoLeft:hover{
     color: var(--SecondColor);
@@ -546,6 +550,8 @@ main h2{
     color: transparent;
     transition: 0.3s;
     z-index: 5;
+    padding: 20px;
+
 }
 .workshead .fa-solid:hover{
     color: var(--PrimaryColor);
@@ -573,6 +579,8 @@ main h2{
     color: transparent;
     transition: 0.3s;
     z-index: 5;
+    padding: 20px;
+
 }
 #GoDown2:hover{
     color: var(--PrimaryColor);
@@ -770,6 +778,8 @@ main h2{
     transition: 0.3s;
     right: 45px;
     z-index: 2;
+    padding: 20px;
+
 }
 .Contact .fa-solid:hover{
     color: var(--SecondColor);
@@ -904,5 +914,192 @@ form button:hover{
 .footer{
     width: 100vw;
     height: 100vh;
-    background-color: rgb(40, 206, 54);
+}
+
+/* mobile veiw of max-width 375px == 23.4375em, 750 = 46.875em */
+
+@media (max-width: 23.4375em) {
+
+  
+    .PagesNumber{
+        left: 10%;
+        bottom: 50px;
+    }
+    .abouthead .fa-solid {
+        margin-left: 20px;
+    }
+    .AboutTextMove{
+        left: 1vmax;
+    }
+    .AboutText p{
+        font-size: 1rem;
+        width: 50vmax;
+    }
+    #GoDown{
+        left: 65%;
+        top: 70%;
+    }
+
+    #GoDown:hover{
+        color: var(--PrimaryColor);
+    }
+    .about .PagesNumber{
+        left: 10%;
+        bottom: 50px;
+    }
+
+ 
+    .skillshead .fa-solid {
+        padding: 2.5px;
+    }
+
+    .Tskills{
+        font-size: 6vmax;
+    }
+    .SkillsContent{
+        padding: 20px;
+    }
+    .MoveSkillsContent{
+        bottom: 30%;
+    }
+    #cart{
+       display: grid;
+       place-content: center;
+    }
+    .SkillsContent img{
+        width: 50%;
+    }
+    
+    .skills .PagesNumber{
+        left: 70%;
+        bottom: 40px;
+    }
+    #GoLeft{
+        bottom: 2%;
+        left: 2%;
+        padding: 20px;
+    }
+
+    .works .PagesNumber{
+        left: 70%;
+        bottom: 50px;
+    }
+
+
+
+    
+    .Contacthead{
+        top: 1%;
+    }
+    .Contact .PagesNumber{
+        left: 60%;
+        bottom: 50px;
+    }
+ 
+    form{
+        width: 38vmax;
+        height: 55vmax;
+        padding: 3vmax;
+        top: -100%;
+        left: 8vmax;
+    }
+    .Moveform{
+        top: 160px;
+    }
+    .socil{
+        bottom: 7%;
+    }
+
+}
+@media (max-width: 50.4375em) {
+    
+    .PagesNumber{
+        left: 10%;
+        bottom: 50px;
+    }
+    .abouthead .fa-solid {
+        margin-left: 20px;
+    }
+    .AboutTextMove{
+        left: 1vmax;
+    }
+    .AboutText p{
+        font-size: 1rem;
+        width: 50vmax;
+    }
+    #GoDown{
+        left: 65%;
+        top: 70%;
+    }
+
+    #GoDown:hover{
+        color: var(--PrimaryColor);
+    }
+    .about .PagesNumber{
+        left: 10%;
+        bottom: 50px;
+    }
+
+ 
+    .skillshead .fa-solid {
+        padding: 2.5px;
+    }
+
+    .Tskills{
+        font-size: 6vmax;
+    }
+    .SkillsContent{
+        padding: 20px;
+    }
+    .MoveSkillsContent{
+        bottom: 30%;
+    }
+    #cart{
+       display: grid;
+       place-content: center;
+    }
+    .SkillsContent img{
+        width: 50%;
+    }
+    
+    .skills .PagesNumber{
+        left: 70%;
+        bottom: 40px;
+    }
+    #GoLeft{
+        bottom: 2%;
+        left: 2%;
+        padding: 20px;
+    }
+
+    .works .PagesNumber{
+        left: 70%;
+        bottom: 50px;
+    }
+
+
+
+    
+    .Contacthead{
+        top: 1%;
+    }
+    .Contact .PagesNumber{
+        left: 60%;
+        bottom: 50px;
+    }
+ 
+    form{
+        width: 38vmax;
+        height: 55vmax;
+        padding: 3vmax;
+        top: -100%;
+        left: 8vmax;
+    }
+    .Moveform{
+        top: 160px;
+    }
+    .socil{
+        bottom: 7%;
+    }
+
 }

@@ -4,12 +4,20 @@ let MoveNext = document.querySelector('.fa-solid');
 //Handler to move to the next page about 
 MoveNext.addEventListener('click',()=>{
     window.location.href = '#about';
+
+    
+    let Nav = document.querySelector('.Nav');
+    Nav.classList.add('removeNav');
 });
 
 //Handler to go back to the home page
 let GoBack = document.querySelector('#GoBack');
 GoBack.addEventListener('click',()=>{
     window.location.href = '#home';
+
+    
+    let Nav = document.querySelector('.Nav');
+    Nav.classList.remove('removeNav');
 });
 
 //Handler to go to the Skills page
@@ -81,6 +89,7 @@ const Aboutobserver = new IntersectionObserver((entries)=>{
 
             let AboutTex =document.querySelector('.AboutText');
             AboutTex.classList.add('AboutTextMove');
+
         }
     })
 });
