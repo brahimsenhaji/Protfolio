@@ -1,0 +1,908 @@
+/*Import google font*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+body{
+    position: relative;
+  
+}
+
+:root{
+    --PrimaryColor : #dcdcd5;
+    --SecondColor : #212121;
+    --ThirdColor : #fff;
+
+    --PrimaryFont : 'Roboto', sans-serif;
+    --SecondFont : sans-serif;
+}
+
+/*--------------------------------------------------*/
+
+.loadingPage{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--SecondColor);
+    display: grid;
+    place-content: center;
+    z-index: 200;
+    animation: changeback 4s forwards;
+}
+@keyframes changeback{
+    to{
+        background-color: var(--PrimaryColor);
+    }
+}
+.loadingPage img{
+    width: 200px;
+    opacity: 0;
+    animation: poping 2s forwards ;
+}
+@keyframes poping{
+    0%{
+        rotate: -360deg;
+        opacity: 0.5;
+    }
+    50%{
+        width: 400px;
+        opacity: 1;
+    }
+    100%{
+        width: 600px;
+        opacity: 0;
+    }
+}
+.loadingPageD{
+    display: none;
+}
+
+/*------------------------------------------------------------------*/
+.container1{
+    position: relative;
+    width: fit-content;
+    display: flex;
+
+}
+.home{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--PrimaryColor);
+    
+}
+nav{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    z-index: 100;
+}
+label{
+    display:flex;
+    flex-direction:column;
+    width:30px;
+    margin-right: 50px;
+    cursor:pointer;
+    gap: 5px;
+}
+label span{
+    background: var(--SecondColor);
+    border-radius:10px;
+    height:3px;
+    transition: 0.3s;
+}
+label:hover span{
+    width: 100%;
+}
+span:nth-of-type(1){
+    width:50%;
+    align-self: flex-end;
+}
+span:nth-of-type(2){
+    width:100%;
+}
+span:nth-of-type(3){
+    width:80%;
+    align-self: flex-end;
+}
+nav a{
+    color: var(--PrimaryColor);
+    transition: 0.3s;
+    margin-left: 10px;
+}
+nav ul{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--PrimaryFont);
+    right: -100%;
+    top: 100px;
+    width: 20vmax;
+    transition: 0.3s;
+ 
+}
+.SlidNav{
+    right: 0;
+}
+nav ul li{
+    margin-top: 20px;
+    background-color: var(--SecondColor);
+    padding: 1vmin 0;
+    cursor: pointer;
+    transition: 0.5s ease-in;
+    text-transform: uppercase;
+    z-index: 2;
+}
+nav ul li:hover{
+    transform: translateX(50%);
+}
+nav img{
+    width: 12vmax;
+}
+main{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    bottom: 0;
+}
+.MainText{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.MainText h1{
+    position: relative;
+    font-size: 20vmax;
+    overflow: visible;
+    color: var(--SecondColor);
+    font-family: var(--PrimaryFont);
+}
+.H{
+    position: relative;
+    right: 100%;
+    transition: 1s;
+}
+.MoveH{
+    right: 0;
+}
+.E{
+    position: relative;
+    bottom: 100%;
+    transition: 1s;
+}
+.MoveE{
+    bottom: 0;
+}
+.L{
+    position: relative;
+    top: 100%;
+    transition: 1s;
+}
+.MoveL{
+   top: 0;
+}
+.O{
+    position: relative;
+    left: 100%;
+    transition: 1s;
+}
+.MoveO{
+    left: 0 ;
+}
+main h2{
+    position: relative;
+    font-size: 2vmax;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0;
+    animation: animH2 8s forwards;
+    color: var(--SecondColor);
+    font-family: var(--PrimaryFont);
+}
+
+@keyframes animH2{
+   to{
+    opacity: 1;
+   }
+}
+
+.home .fa-solid {
+    position: absolute;
+    right: 2%;
+    bottom: 2%;
+    font-size: 20vmax;
+    cursor: pointer;
+    -webkit-text-stroke: 3px var(--SecondColor);
+    color: transparent;
+    transition: 0.3s;
+}
+.home .fa-solid:hover{
+    color: var(--SecondColor);
+}
+
+.PagesNumber{
+    position: absolute;
+    left: 50px;
+    bottom: 10px;
+    color: transparent;
+    padding: 5px;
+    font-size: 10vmax;
+    display: grid;
+    place-content: center;
+    font-family: var(--PrimaryFont);
+    -webkit-text-stroke: 2px  var(--SecondColor);
+}
+.PagesNumber::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 5px;
+    background-color: var(--SecondColor);
+    bottom: 0;
+}
+
+.blurc{
+    position: absolute;
+    rotate: 10deg;
+    filter: drop-shadow(0 0 50px var(--PrimaryColor));
+    opacity: 0;
+    animation: blur 12s forwards;
+}
+@keyframes blur{
+    to{
+        opacity: 1;
+    }
+}
+/*----------------------------------------------------------------------------------------------*/
+.about{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--SecondColor);
+}
+.abouthead{
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    margin-top: 20px;
+}
+.abouthead .fa-solid {
+    margin-left: 10px;
+    font-size: 20vmax;
+    cursor: pointer;
+    -webkit-text-stroke: 3px var(--PrimaryColor);
+    color: transparent;
+    transition: 0.3s;
+    z-index: 5;
+}
+.abouthead .fa-solid:hover{
+    color: var(--PrimaryColor);
+}
+.TAbout{
+    position: absolute;
+    left: -100%;
+    font-size: 5vmax;
+    width: fit-content;
+    text-transform: uppercase;
+    color: var(--PrimaryColor);
+    font-family: var(--SecondFont);
+    transition: 0.5s;
+}
+.TAboutMove{
+   left: 30%;
+}
+
+.AboutText{
+    position: absolute;
+    font-family: var(--PrimaryFont);
+    width: fit-content;
+    display: grid;
+    place-content: center;
+    padding: 0 20px;
+    top: 22vmax;
+    left: -80vmax;
+    transition: 1s;
+}
+.AboutTextMove{
+    left: 5vmax;
+}
+
+.AboutText h3{
+    color: var(--ThirdColor);
+    font-family: var(--SecondFont);
+    margin-bottom: 10px;
+    font-size: 3.5vmax;
+}
+.AboutText p{
+    color: var(--PrimaryColor);
+    font-size: 1rem;
+    width: 45vmax;
+}
+.More{
+    margin-top: 30px;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+   
+}
+.AboutText a{
+    color: var(--PrimaryColor);
+    border: 1px solid var(--PrimaryColor);
+    width: fit-content;
+    font-size: 1.5vmax;
+    padding: 10px 10px;
+    text-transform: uppercase;
+    transition: 0.3s ease-in-out;
+}
+.AboutText a:hover{
+    background-color: var(--PrimaryColor);
+    color: var(--SecondColor);
+}
+#GoDown{
+    left: 80%;
+    top: 55%;
+}
+@media screen and (max-width:767px) {
+    #GoDown{
+        left: 70%;
+        top:80%;
+    }
+}
+#GoDown{
+    position: absolute;
+    right: 5%;
+    font-size: 20vmax;
+    cursor: pointer;
+    -webkit-text-stroke: 3px var(--PrimaryColor);
+    color: transparent;
+    transition: 0.3s;
+    z-index: 5;
+}
+#GoDown:hover{
+    color: var(--PrimaryColor);
+}
+.about .PagesNumber{
+    position: absolute;
+    left: 40%;
+    bottom: 10px;
+    color: transparent;
+    padding: 5px;
+    font-size: 10vmax;
+    display: grid;
+    place-content: center;
+    font-family: var(--PrimaryFont);
+    -webkit-text-stroke: 2px  var(--PrimaryColor);
+}
+.about .PagesNumber::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 5px;
+    background-color: var(--PrimaryColor);
+    bottom: 0;
+}
+
+.blur2{
+    position: absolute;
+    rotate: 10deg;
+    filter: drop-shadow(0 0 50px var(--SecondColor));
+    opacity: 1;
+    right: 8%;
+}
+
+/*---------------------------------------------------------------------------*/
+.container2{
+    position: relative;
+    width: max-content;
+    display: flex;
+    overflow: hidden;
+}
+.skills{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--PrimaryColor);
+    
+}
+.skillshead{
+    position: relative;
+    display: flex;
+    margin-top: 20px;
+}
+.skillshead .fa-solid {
+    font-size: 20vmax;
+    margin-left: 20px;
+    cursor: pointer;
+    -webkit-text-stroke: 3px var(--SecondColor);
+    color: transparent;
+    transition: 0.3s;
+}
+.skillshead .fa-solid:hover{
+    color: var(--SecondColor);
+}
+.Tskills{
+    position: absolute;
+    left: 35%;
+    font-size: 5vmax;
+    width: fit-content;
+    text-transform: uppercase;
+    color: var(--SecondColor);
+    font-family: var(--SecondFont);
+    top: -50%;
+    transition: 1s;
+}
+.MoveTskills{
+    top: 10px;
+}
+.tit{
+    position: absolute;
+    text-align: center;
+    color: var(--SecondColor);
+    font-size: 2vmax;
+    width: 100%;
+    bottom: 100%;
+    transition: 1s;
+    font-family: var(--PrimaryFont);
+}
+.Movetit{
+    bottom: 70%;
+}
+.SkillsContent{
+    position: absolute;
+    width: 100%;
+    place-self: end;
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(4,20%);
+    gap: 20px;
+    place-content: center;
+    bottom: 100%;  
+    transition: 1s; 
+}
+.MoveSkillsContent{
+    bottom: 25%;
+}
+#cart{
+   display: grid;
+   place-content: center;
+}
+.SkillsContent img{
+    width: 50%;
+}
+
+.skills .PagesNumber{
+    position: absolute;
+    left: 70%;
+    bottom: 10px;
+    color: transparent;
+    padding: 5px;
+    font-size: 10vmax;
+    display: grid;
+    place-content: center;
+    font-family: var(--PrimaryFont);
+    -webkit-text-stroke: 2px  var(--SecondColor);
+}
+.skills .PagesNumber::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 5px;
+    background-color: var(--SecondColor);
+    bottom: 0;
+}
+#GoLeft{
+    position: absolute;
+    bottom: 0%;
+    left: 5%;
+    font-size: 20vmax;
+    cursor: pointer;
+    -webkit-text-stroke: 3px var(--SecondColor);
+    color: transparent;
+    transition: 0.3s;
+}
+#GoLeft:hover{
+    color: var(--SecondColor);
+}
+.blur3{
+    position: absolute;
+    rotate: 250deg;
+    filter: drop-shadow(0 0 50px var(--PrimaryColor));
+    opacity: 1;
+    right: 8%;
+}
+/*------------------------------------------------------------------------------------------------*/
+.works{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--SecondColor);
+}
+.workshead{
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    margin-top: 10px;
+}
+.workshead .fa-solid {
+    margin-left: 220px;
+    font-size: 20vmax;
+    cursor: pointer;
+    -webkit-text-stroke: 3px var(--PrimaryColor);
+    color: transparent;
+    transition: 0.3s;
+    z-index: 5;
+}
+.workshead .fa-solid:hover{
+    color: var(--PrimaryColor);
+}
+.Tworks{
+    position: absolute;
+    left: 100%;
+    font-size: 5vmax;
+    width: fit-content;
+    text-transform: uppercase;
+    color: var(--PrimaryColor);
+    font-family: var(--SecondFont);
+    transition: 1s;
+}
+.MoveTworks{
+    left: 50px;
+}
+#GoDown2{
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    font-size: 20vmax;
+    cursor: pointer;
+    -webkit-text-stroke: 3px var(--PrimaryColor);
+    color: transparent;
+    transition: 0.3s;
+    z-index: 5;
+}
+#GoDown2:hover{
+    color: var(--PrimaryColor);
+}
+
+.works .PagesNumber{
+    position: absolute;
+    left: 70%;
+    bottom: 10px;
+    color: transparent;
+    padding: 5px;
+    font-size: 10vmax;
+    display: grid;
+    place-content: center;
+    font-family: var(--PrimaryFont);
+    -webkit-text-stroke: 2px  var(--PrimaryColor);
+}
+.works .PagesNumber::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 5px;
+    background-color: var(--PrimaryColor);
+    bottom: 0;
+}
+.blur4{
+    position: absolute;
+    rotate: -170deg;
+    filter: drop-shadow(0 0 50px var(--SecondColor));
+    opacity: 1;
+    right: 8%;
+}
+/*--------------------------------------------------------------------*/
+/* Container */
+
+.thumbnail-slider{
+    position: absolute;
+    top: 40vh;
+    left: -100vw;
+	width: 80%;
+	float: left;
+	overflow: hidden;
+    transition: 1s;
+}
+.Movethumbnail-slider{
+    left: 10vw;
+}
+.thumbnail-slider .thumbnail-container{
+	width: 100%;
+	float: left;
+	transition: margin 1s ease;
+}
+
+.thumbnail-slider .card{
+  height: 170px;
+  background-color: var(--ThirdColor);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  float: left;
+  cursor: pointer;
+}
+.thumbnail-slider .controls{
+	width: 100%;
+	float: left;
+	padding:15px;
+}
+.thumbnail-slider .controls ul{
+	display: flex;
+    place-content: center;
+    gap: 4px;
+}
+.thumbnail-slider .controls ul li{
+    display: grid;
+    place-content: center;
+	height: fit-content;
+	width: fit-content;
+    padding: 5px 10px;
+	border:1px solid var(--PrimaryColor);
+    color: var(--PrimaryColor);
+	cursor: pointer;
+    transition: 0.3s;
+}
+.controls ul li:hover{
+	background-color: var(--PrimaryColor);
+	color:var(--SecondColor);
+
+}
+
+.card-image{
+    width: 100%;
+}
+.card-image img{
+    width: 100%;
+}
+.card-info{
+    display: grid;
+    place-content: center;
+    width: 100%;
+    padding: 10px 0;
+}
+/*---------------------------------------------------------------------*/
+.MoreInfo{
+    position: absolute;
+    width: 80vw;
+    height: 80vh;
+    background-color: var(--PrimaryColor);
+    z-index: 10;
+    left: 5%;
+    top: 10%;
+    transform: scale(0);
+    box-shadow: 0 0 300px rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.ActivMoreInfo{
+    transform: scale(1);
+}
+.Remove{
+    position: fixed;
+    right: 10px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    background-color: var(--SecondColor);
+    color: var(--PrimaryColor);
+    border: 2px solid transparent;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.Remove:hover{
+    border: 2px solid var(--SecondColor);
+    color: var(--SecondColor);
+    background-color: transparent;
+}
+.TitleMore{
+    font-size: 3rem;
+  
+}
+.ImageMore{
+    width: 60%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.438);
+}
+.linkMore{
+    background-color: transparent;
+    padding: 10px 20px;
+    color: var(--SecondColor);
+    border: 2px solid var(--SecondColor);
+    transition: 0.3s;
+}
+.linkMore:hover{
+    background-color: var(--SecondColor);
+    color: var(--PrimaryColor);
+    border: 2px solid transparent;
+}
+.blur6{
+    position: absolute;
+    z-index: -1;
+    right: 80%;
+}
+.blur7{
+    position: absolute;
+    z-index: -1;
+    left: 60% ;
+    bottom: 20%;
+    rotate: 180deg;
+}
+/*--------------------------------------------------------------------*/
+.container3{
+    position: absolute;
+    width: fit-content;
+}
+.Contact{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--PrimaryColor);
+}
+.Contacthead{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Contact .fa-solid {
+    font-size: 20vmax;
+    cursor: pointer;
+    -webkit-text-stroke: 3px var(--SecondColor);
+    color: transparent;
+    transition: 0.3s;
+    right: 45px;
+    z-index: 2;
+}
+.Contact .fa-solid:hover{
+    color: var(--SecondColor);
+}
+.Tcontact{
+    margin-bottom: 70px; 
+    margin-left: 10px; 
+    font-size: 5vmax;
+    width: fit-content;
+    text-transform: uppercase;
+    color: var(--SecondColor);
+    font-family: var(--SecondFont);
+    opacity: 0;
+    transition: 1s;
+}
+.MoveTcontact{
+    opacity: 1;
+}
+.MoveTcontact{
+    top: 0;
+}
+.Contact .PagesNumber{
+    position: absolute;
+    left: 60%;
+    bottom: 10px;
+    color: transparent;
+    padding: 5px;
+    font-size: 10vmax;
+    display: grid;
+    place-content: center;
+    font-family: var(--PrimaryFont);
+    -webkit-text-stroke: 2px  var(--SecondColor);
+}
+.Contact .PagesNumber::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 5px;
+    background-color: var(--SecondColor);
+    bottom: 0;
+}
+.blur5{
+    position: absolute;
+    rotate: -180deg;
+    filter: drop-shadow(0 0 50px var(--PrimaryColor));
+    opacity: 1;
+    right: 8%;
+}
+/*-----------------------------------------------*/
+form{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--SecondColor);
+    width: 35vmax;
+    padding: 3vmax;
+    top: -100%;
+    left: 10vmax;
+    transition: 1s;
+}
+.Moveform{
+    top: 150px;
+}
+form input{
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgb(100, 100, 100);
+    color: var(--ThirdColor);
+    transition: 0.3s;
+}
+form input:focus{
+    border-bottom: 1px solid var(--ThirdColor);
+}
+form input,form textarea::placeholder{
+    color: var(--PrimaryColor);
+}
+form textarea{
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    resize: none;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgb(100, 100, 100);
+    background-color: transparent;
+    color: var(--ThirdColor);
+}
+form textarea:focus{
+    border-bottom: 1px solid var(--ThirdColor);
+}
+form button{
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid var(--PrimaryColor);
+    color: var(--PrimaryColor);
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+form button:hover{
+    background-color: var(--PrimaryColor);
+    color: var(--SecondColor);
+}
+
+
+.socil{
+    position: absolute;
+    width: fit-content;
+    right: 1%;
+    bottom: 1%;
+    display: flex;
+    flex-direction: column;
+}
+.socil i{
+    font-size: 40px;
+    margin: 0 5px;
+    transition: 0.3s;
+}
+.socil a{
+    color: var(--SecondColor);
+}
+.socil i:hover{
+    transform: scale(1.1);
+}
+.footer{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(40, 206, 54);
+}

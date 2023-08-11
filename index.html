@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./Images/white logo.png" type="image/icon type">
+    <!-- Link Font Awesome cdnjs-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+     <!-- Link CSS file -->
+    <link rel="stylesheet" href="./Style.css">
+    <title>Brahim-Senhaji</title>
+</head>
+<body>
+  <div class="cursor"></div>
+    <!--Container 1 Have the landing page and the about page -->
+
+   <div class="container1">
+    <div class="loadingPage">
+        <img src="./Images/Logo.png">
+    </div>
+    <!--the landing page -->
+        <div class="home" id="home">
+          <img src="./Images/blur circle.png" class="blurc">
+            <nav>
+              <a href="#home" class="Logo"><img src="./Images/Logo.png"></a>
+
+              <label onclick="ShowNav()">
+                <span></span>
+                <span></span>
+                <span></span>
+              </label>
+              <ul class="Nav">
+                <a href="#home" onclick="hid()"><li>01 Home</li></a>
+                <a href="#about" onclick="hid()"><li>02 About</li></a>
+                <a href="#skills" onclick="hid()"><li>03 Skills</li></a>
+                <a href="#works" onclick="hid()"><li>04 Works</li></a>
+                <a href="#contact" onclick="hid()"><li>05 Contact</li></a>
+              </ul>
+            </nav>
+             </div>
+            <main>
+                <div class="MainText">
+                  <h1><span class="H">H</span><span class="E">e</span><span class="L">ll</span><span class="O">o</span></h1>
+                  <h2 class="h2">Im brahim</h2>
+                  <h2 class="h2">Im a web developer</h2>
+                </div>
+                <i class="fa-solid fa-arrow-right"></i>
+                <h1 class="PagesNumber">01</h1>
+            </main>
+        </div>
+        <!--the about page -->
+        <div class="about" id="about">
+          <img src="./Images/blur circle 2.png" class="blur2">
+            <div class="abouthead">
+                <i class="fa-solid fa-arrow-left" id="GoBack"></i>
+                <h1 class="TAbout" id="animate">About me</h1>
+            </div>
+            <div class="AboutText">
+                <h3>Hello my name is Brahim Senhaji</h3>
+                <p>As a full-stack web developer, I thrive on thinking out of the box when creating web applications. My passion lies in seamlessly merging the realms of logic and creative design to craft eye-catching, accessible, and user-friendly websites. I take pride in my ability to create innovative and functional solutions that not only meet clients' needs but also exceed their expectations. Let's build something remarkable together!</p>
+               <div class="More">
+                <a href="#works">Take a look of my works</a>
+                <a href="./Myinfo/CV(E).pdf">My reusme</a>
+               </div>
+
+               <script>
+                const fileInput = document.getElementById('fileInput');
+            
+                const downloadLink = document.getElementById('downloadLink');
+            
+                fileInput.addEventListener('change', function() {
+                  const file = fileInput.files[0];
+            
+                  if (file) {
+                    const fileURL = URL.createObjectURL(file);
+            
+                    downloadLink.href = fileURL;
+            
+                    downloadLink.setAttribute('download', file.name);
+            
+                    downloadLink.style.display = 'block';
+                  } else {
+                    downloadLink.style.display = 'none';
+                  }
+                });
+              </script>
+            </div>
+              <i class="fa-solid fa-arrow-down" id="GoDown"></i>
+              <h1 class="PagesNumber">02</h1>
+        </div>
+  </div>
+   <!--Container 2 Have the skills page and the works page -->
+   <div class="container2">
+    <div class="MoreInfo">
+      <button class="Remove">X</button>
+      <img src="./Images/blur circle.png" class="blur6">
+      <img src="./Images/blur circle.png" class="blur7">
+    </div>
+    <div class="works" id="works">
+      <img src="./Images/blur circle 2.png" class="blur4">
+       <div class="workshead">
+        <i class="fa-solid fa-arrow-right" id="GoRight"></i>
+        <h1 class="Tworks">Works</h1>
+       </div>
+          <!------------------------------------------------------------->
+          <div class="thumbnail-slider">
+            <div class="thumbnail-container">
+              <div class="card" onclick="pop(0)">
+                <div class="card-image">
+                    <img src="./Images/CarsWeb.png" class="product-thumb">
+                </div>
+                <div class="card-info">
+                    <p>Web Site to sell and buy a new or used cars</p>
+                </div>
+              </div>
+              <div class="card" onclick="pop(1)">
+                <div class="card-image">
+                  <img src="./Images/rorestaurantWeb.JPG" class="product-thumb">
+              </div>
+              <div class="card-info">
+                  <p>Rosa is a restaurant, bar and coffee roastery</p>
+              </div>
+              </div>
+              <div class="card" onclick="pop(2)">
+                <div class="card-image">
+                  <img src="./Images/UtopiaWeb.JPG" class="product-thumb">
+              </div>
+              <div class="card-info">
+                <p>Web site to sell or rent propreties</p>
+              </div>
+              </div>
+            </div>
+            
+            <!-- controls slides -->
+            <div class="controls">
+            </div>
+          
+          </div>
+        <h1 class="PagesNumber">04</h1>
+        <i class="fa-solid fa-arrow-down" id="GoDown2"></i>
+    </div>
+    <!--------------------------------------------------------------->
+    <div class="skills" id="skills" a ="hhh('skills')">
+      <img src="./Images/blur circle.png" class="blur3">
+        <div class="skillshead">
+          <i class="fa-solid fa-arrow-up" id="GoUp"></i>
+          <h1 class="Tskills">Skills</h1>
+        </div>
+        
+        <h3 class="tit">The skills, tools and technologies I use to bring your products to life</h3>
+        <div class="SkillsContent">
+            <div class="css" id="cart">
+              <img src="./Icons/css3.png">
+              <h4>CSS3</h4>
+            </div>
+            <div class="html" id="cart">
+              <img src="./Icons/html5.png">
+              <h4>HTNL5</h4>
+            </div>
+            <div class="js" id="cart">
+              <img src="./Icons/js.png">
+              <h4>JAVASCRIPT</h4>
+            </div>
+            <div class="botstrap" id="cart">
+              <img src="./Icons/botstrap.png">
+              <h4>BOTSTRAP</h4>
+            </div>
+            <div class="react" id="cart">
+              <img src="./Icons/react.png">
+              <h4>REACT</h4>
+            </div>
+            <div class="php" id="cart">
+              <img src="./Icons/php.png">
+              <h4>PHP</h4>
+            </div>
+            <div class="laravel" id="cart">
+              <img src="./Icons/laravel.png">
+              <h4>LARAVE</h4>
+            </div>
+            <div class="git" id="cart">
+              <img src="./Icons/git.png">
+              <h4>GIT</h4>
+            </div>
+            <div class="github" id="cart">
+              <img src="./Icons/github.png">
+              <h4>GITHUB</h4>
+            </div>
+            <div class="vscode" id="cart">
+              <img src="./Icons/vscode.png">
+              <h4>VS CODE</h4>
+            </div>
+            
+        </div>
+        <i class="fa-solid fa-arrow-left" id="GoLeft"></i>
+        <h1 class="PagesNumber">03</h1>
+    </div>
+   </div>
+   <!--Container 3 Have the contact page and the footer-->
+   <div class="container3">
+    <div class="Contact" id="contact">
+      <img src="./Images/blur circle.png" class="blur5">
+        <div class="Contacthead">
+          <h1 class="Tcontact">Contact me</h1>
+          <i class="fa-solid fa-arrow-up" id="GoUp2"></i>
+        </div>
+        <form id="form">
+             <input type="text" name="from_name" id="from_name"  placeholder="Full Name" required>
+             <input type="email" name="email_id" id="email_id" placeholder="Your Email" required >
+            <textarea cols="30" rows="10" placeholder="How can i help you ?" name="message" id="message" required></textarea>
+            <button id="button">SEND MESSAGE</button>
+        </form>
+        <div class="socil">
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-square-github"></i></a>
+        </div>
+        <h1 class="PagesNumber">05</h1>
+    </div>
+    <div class="footer"></div>
+   </div>
+    <!-- script JS file -->
+    <script src="./Script.js"></script>
+    <!--Script from Email js to actvit the sending email function-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+       emailjs.init('CeBkGtah9u_f_Z65L')
+    </script>
+     
+</body>
+</html>
