@@ -1019,10 +1019,11 @@ form button:hover{
         text-align: center;
     }
     .abouthead .fa-solid {
-        margin-left: 20px;
+        margin-left: 25px;
     }
     .AboutTextMove{
         left: 1vmax;
+        padding: 0px;
     }
     .AboutText p{
         font-size: 1rem;
@@ -1058,6 +1059,9 @@ form button:hover{
     #cart{
        display: grid;
        place-content: center;
+    }
+    #cart h4{
+        font-size: 12px;
     }
     .SkillsContent img{
         width: 50%;
