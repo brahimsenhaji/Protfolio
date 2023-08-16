@@ -159,7 +159,9 @@ let MoreInfo = document.querySelector('.MoreInfo');
 let MoreData =  [
     {img:'./Images/CarsWeb.png' , title:'WAGAN' , description:'WAGEN is an online platform to sell or buy cars in perfect shape' , link:'https://wagen.netlify.app/'},
     {img:'./Images/rorestaurantWeb.JPG' , title:'Rosa' , description:'Rosa is a restaurant, bar and coffee roastery' , link:'https://rorestaurant.netlify.app/'},
-    {img:'./Images/UtopiaWeb.JPG' , title:'Utopia' , description:'Utopia is an online platform where you can sell or rent your property' , link:'https://github.com/brahimsenhaji/Utopia'}
+    {img:'./Images/UtopiaWeb.JPG' , title:'Utopia' , description:'Utopia is an online platform where you can sell or rent your property' , link:'https://github.com/brahimsenhaji/Utopia'},
+    {img:'./Images/Sofinord.JPG' , title:'Sofinord' , description:'Company website for Industrial Maintenance and Supplies' , link:'https://sofinord.netlify.app/'}
+
 
 ]
 let  pop = (props)=>{
