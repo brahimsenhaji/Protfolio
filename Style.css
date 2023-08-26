@@ -1079,7 +1079,9 @@ form button:hover{
         left: 2%;
         padding: 20px;
     }
-
+    .thumbnail-slider{
+        top: 30%;
+    }
     .works .PagesNumber{
         left: 70%;
         bottom: 10%;
@@ -1087,9 +1089,6 @@ form button:hover{
     #GoDown2{
         bottom: 8%;
     }
-
-
-    
     .Contacthead{
         top: 1%;
     }
