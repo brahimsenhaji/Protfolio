@@ -1013,9 +1013,12 @@ form button:hover{
     
     .PagesNumber{
         left: 10%;
-        bottom: 50px;
+        bottom: 100px;
         padding: 20px;
         text-align: center;
+    }
+    .home .fa-solid{
+        bottom: 5%;
     }
     .abouthead .fa-solid {
         margin-left: 25px;
