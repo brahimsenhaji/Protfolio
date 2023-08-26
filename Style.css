@@ -312,11 +312,9 @@ main h2{
 .AboutText{
     position: absolute;
     font-family: var(--PrimaryFont);
-    width: fit-content;
-    display: grid;
-    place-content: center;
-    padding: 0 20px;
-    top: 22vmax;
+    width: fit-content;  
+    padding: 0 100px;
+    top: 18vmax;
     left: -80vmax;
     transition: 1s;
 }
@@ -928,14 +926,15 @@ form button:hover{
         margin-left: 20px;
     }
     .AboutTextMove{
-        left: 1vmax;
+        left: 0;
+        top: 30%;
     }
     .AboutText p{
         font-size: 1rem;
-        width: 50vmax;
+        width: 100%;
     }
     #GoDown{
-        left: 65%;
+        left: 60%;
         top: 70%;
     }
 
@@ -1022,15 +1021,17 @@ form button:hover{
         margin-left: 25px;
     }
     .AboutTextMove{
-        left: 1vmax;
-        padding: 0px;
+        padding: 10px;
+        top:30%;
+        left: 0;
     }
     .AboutText p{
         font-size: 1rem;
-        width: 50vmax;
+        width: 100%;
+        padding: 10px;
     }
     #GoDown{
-        left: 65%;
+        left: 60%;
         top: 70%;
     }
 
