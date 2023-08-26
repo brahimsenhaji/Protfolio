@@ -1047,12 +1047,9 @@ form button:hover{
         left: 10%;
         bottom: 10%;
     }
-
- 
     .skillshead .fa-solid {
         padding: 2.5px;
     }
-
     .Tskills{
         font-size: 6vmax;
     }
@@ -1074,11 +1071,11 @@ form button:hover{
     }
     
     .skills .PagesNumber{
-        left: 70%;
-        bottom: 40px;
+        left: 69%;
+        bottom: 45px;
     }
     #GoLeft{
-        bottom: 2%;
+        bottom: 5%;
         left: 2%;
         padding: 20px;
     }
