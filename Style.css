@@ -773,7 +773,7 @@ main h2{
     -webkit-text-stroke: 3px var(--SecondColor);
     color: transparent;
     transition: 0.3s;
-    right: 45px;
+    right: 5%;
     z-index: 2;
     padding: 20px;
 
@@ -1093,19 +1093,21 @@ form button:hover{
         top: 1%;
     }
     .Contact .PagesNumber{
-        left: 60%;
-        bottom: 50px;
+        left: 5%;
+        bottom: 10%;
     }
- 
+    #GoUp2{
+        right: 5%;
+    }
     form{
         width: 38vmax;
         height: 55vmax;
         padding: 3vmax;
         top: -100%;
-        left: 8vmax;
+        left: 10%;
     }
     .Moveform{
-        top: 160px;
+        top: 22%;
     }
     .socil{
         bottom: 7%;
