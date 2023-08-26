@@ -1019,6 +1019,8 @@ form button:hover{
     }
     .home .fa-solid{
         bottom: 5%;
+        right: 3%;
+        padding: 2px;
     }
     .abouthead .fa-solid {
         margin-left: 25px;
